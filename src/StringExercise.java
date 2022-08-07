@@ -5,40 +5,34 @@ public class StringExercise {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String string1 = sc.nextLine();
-//        arrayListOfStrings(string1);
-        reverseEachWord(string1.toCharArray());
     }
 
-    public static void arrayListOfStrings(String string1) {
-
-    }
-
-
-    public static void reverseEachWord(char[] string1) {
-        int start = 0;
-        for (int end = 0; end < string1.length; end++) {
-            // If we see a space, we
-            // reverse the previous
-            // word (word between
-            // the indexes start and end-1
-            // i.e., s[start..end-1]
-            if (string1[end] == ' ') {
-                char temp;
-                while (start <= end) {
-                    // Swapping the first
-                    // and last character
-                    temp = string1[start];
-                    string1[start] = string1[end];
-                    string1[end] = temp;
-                    start++;
-                    end--;
-                }
-                start = end + 1;
-            }
-        }
-        System.out.println(string1);
-    }
 }
+
+//public static void reverseEachWords(String string1){
+//        String[]words=string1.split("\\s");
+//        String[]reverseWords=new String[words.length];
+//        for (int i=0;i<words.length;i++){
+//            reverseWords[words.length-i-1]=words[i];
+//        }
+//        for (int i=0;i< words.length;i++){
+//            System.out.print(reverseWords[i]+" ");
+//        }
+//    }
+
+//    public  static void convertName(String string1){
+//        String[] words=string1.split("\\s");
+//        String index="";
+//        for (int i=0;i<words.length;i++){
+//            if(i == (words.length-1)){
+//                index=words[i]+index;
+//            }
+//            else
+//                index=index+" "+words[i];
+//        }
+//        System.out.println(index);
+//    }
+
 //    public static void convertString(String string1){
 //        StringBuffer string2=new StringBuffer(string1);
 //        int numeralNumber=0;

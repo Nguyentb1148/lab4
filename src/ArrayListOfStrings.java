@@ -1,35 +1,26 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
-
 public class ArrayListOfStrings {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("How many word?: ");
-        int words = sc.nextInt();
-        ArrayList<String> listString = new ArrayList<>(words);
-        for (int i = 0; i < words; i++) {
-            System.out.print((i + 1) + ": ");
-            listString.add(sc.next());
-        }
-        contains3(listString);
+        List<String> listString = new ArrayList<>();
+        listString.add("be");
+        listString.add("be");
+        listString.add("be");
+        listString.add("is");
+        System.out.println(contains3(listString));
     }
     public static boolean contains3(List<String> list) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-
         for(String str : list) {
             if(map.containsKey(str)) {
                 map.put(str, map.get(str) + 1);
-
                 if(map.get(str) == 3)
-                    System.out.println(map.get(str));
                     return true;
             } else {
                 map.put(str, 1);
             }
         }
-// abc
         return false;
     }
 //    public static void contains3(ArrayList<String> list) {
